@@ -8,13 +8,23 @@
 <link rel="icon" href="images/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="progress" id="progress"></div>
+<div class="util-bar">
+  <div class="wrap util-inner">
+    <span class="util-note">Remote tutoring nationwide &middot; Evenings and weekends</span>
+    <div class="socials">
+      <a href="#" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.2-1.5 1.5-1.5H16.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.6v3h2.7v8h3.2z"/></svg></a>
+      <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-.9 0-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7C3.4 8.5 3.4 8.9 3.4 12s0 3.5.1 4.8c0 .9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c0-.9-.2-1.4-.3-1.7-.2-.4-.4-.7-.7-1-.3-.3-.6-.5-1-.7-.3-.1-.8-.3-1.7-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+      <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.9 8.6H3.7V21h3.2V8.6zM5.3 3.1a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM21 21h-3.2v-6c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.8 1.3-.1.2-.1.6-.1.9V21H10.8s.1-11.2 0-12.4H14v1.8c.4-.7 1.2-1.7 3-1.7 2.2 0 3.9 1.4 3.9 4.5V21z"/></svg></a>
+    </div>
+  </div>
+</div>
 <header class="site-head">
   <div class="wrap head-inner">
     <a class="brand" href="index.html">
@@ -28,8 +38,16 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="purpose-plan.html" aria-current="page">The Purpose Plan</a>
-      <a href="tutoring-pods.html">Tutoring + Purpose Pods</a>
-      <a href="summer-program.html">Summer Program</a>
+      <div class="nav-drop">
+        <button type="button" aria-expanded="false">Academic Programs</button>
+        <div class="drop-menu">
+        <a href="programs.html" class="drop-lead">All Programs</a>
+        <a href="tutoring.html">One-on-One Tutoring</a>
+        <a href="purpose-pods.html">Purpose Pods</a>
+        <a href="summer-program.html">Summer Program</a>
+        <a href="college-support.html">College Admissions &amp; Planning</a>
+        </div>
+      </div>
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-gold head-cta" href="contact.html">Start Your Purpose Plan</a>
@@ -45,7 +63,7 @@
     <div class="inner">
       <p class="crumb"><a href="index.html">Home</a><span>/</span>The Purpose Plan</p>
       <h1>The <em>Purpose Plan.</em></h1>
-      <p>A personalized educational roadmap designed around each student&rsquo;s strengths, goals, and needs.</p>
+      <p>Every student&rsquo;s journey begins with a personalized plan &mdash; a roadmap designed around their strengths, goals, and learning needs.</p>
       <a class="btn btn-gold" href="contact.html">Start Your Purpose Plan</a>
     </div>
   </div>
@@ -54,12 +72,12 @@
   <section class="paper">
     <div class="wrap split narrow-left">
       <div class="rv">
-        <p class="eyebrow">What it is</p>
+        <span class="badge badge-quiet">Signature Framework</span>
         <p class="diff-statement">A personalized educational roadmap designed around each student&rsquo;s strengths, goals, and needs.</p>
       </div>
       <div class="rv prose">
-        <p>The Purpose Plan is where every student begins. Before any instruction is scheduled, we build a clear picture of where your student is now, agree what they are working towards, and set out how they will get there.</p>
-        <p>It is what makes the rest of the work personalized rather than generic &mdash; the plan decides the subject focus, the format, and the pace, rather than the other way round.</p>
+        <p>At Purpose Education, we believe every student has the potential to become more than they are today. Through individualized educational planning and personalized instruction, we help students bridge the gap between where they are and where they want to be.</p>
+        <p>We are more than tutoring &mdash; we partner with families to create a custom roadmap that builds confidence, develops strengths, and empowers every learner to succeed with purpose.</p>
         <a class="textlink" href="index.html#finder">Find your starting point</a>
       </div>
     </div>
@@ -69,7 +87,7 @@
     <div class="plate-bg" data-par="-0.06"></div>
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="eyebrow on-navy">The process</p>
+        <p class="eyebrow on-navy">The Process</p>
         <h2>Assess &rarr; Plan &rarr; Learn &rarr; Grow &rarr; Reflect</h2>
         <p>Five stages that repeat as your student progresses.</p>
       </div>
@@ -81,12 +99,16 @@
   <div class="step"><div class="medal"><span>V</span></div><h3>Reflect</h3><p>Identify next steps.</p><span class="arw">&#8594;</span></div>
 </div>
       <div class="venn-block rv">
-        <div class="venn-copy">
-          <h3>Three strands, one outcome.</h3>
-          <p>The Purpose Plan works where academic growth, personalized support, and confidence meet. Student success sits at the centre &mdash; the point where all three are working together.</p>
-          <ul class="venn-list"><li>Academic Growth</li><li>Personalized Support</li><li>Confidence &amp; Purpose</li></ul>
-        </div>
-        <div><svg class="venn-svg" id="venn" viewBox="0 0 480 450" role="img" aria-label="Venn diagram: Academic Growth, Personalized Support and Confidence and Purpose overlapping at Student Success">
+  <div class="venn-copy">
+    <h3>Three Pillars. One Purpose.</h3>
+    <p>The Purpose Plan brings together three essential elements of student success. When academic growth, personalized support, and confidence work together, students are empowered to reach their full potential.</p>
+    <ul class="venn-list">
+      <li><b>Academic Growth</b> &mdash; building the skills and knowledge students need to succeed.</li>
+      <li><b>Personalized Support</b> &mdash; instruction tailored to each student&rsquo;s strengths, goals, and learning style.</li>
+      <li><b>Confidence &amp; Purpose</b> &mdash; helping students believe in themselves while developing motivation, independence, and a love of learning.</li>
+    </ul>
+  </div>
+  <div><svg class="venn-svg" id="venn" viewBox="0 0 480 450" role="img" aria-label="Venn diagram: Academic Growth, Personalized Support and Confidence and Purpose overlapping at Student Success">
   <circle class="vc" cx="240" cy="172" r="116"/>
   <circle class="vc" cx="184" cy="272" r="116"/>
   <circle class="vc" cx="296" cy="272" r="116"/>
@@ -106,7 +128,7 @@
     <text class="vcore" x="240" y="272" text-anchor="middle">Success</text>
   </g>
 </svg></div>
-      </div>
+</div>
     </div>
   </section>
 
@@ -114,39 +136,38 @@
     <div class="wrap">
       <div class="sec-head rv">
         <p class="eyebrow">Investment</p>
-        <h2>Investment in your student&rsquo;s growth</h2>
+        <h2>Investment in Your Student&rsquo;s Growth</h2>
       </div>
       <div class="price-grid">
         <div class="price-card tbc rv">
-          <span class="p-label">The Purpose Plan</span>
-          <h3>Customized</h3>
-          <span class="p-amount">To be confirmed</span>
-          <span class="p-unit">Pricing pending client confirmation</span>
-          <p>Priced according to the assessment and the plan your student needs.</p>
+          <span class="p-label">Signature Framework</span>
+          <h3>The Purpose Plan</h3>
+          <span class="p-amount">Customized</span>
+          <span class="p-unit">Priced to the assessment and the plan</span>
+          <p>The starting point for every student.</p>
         </div>
-        <div class="price-card tbc rv">
-          <span class="p-label">1:1 Tutoring</span>
-          <h3>Per hour</h3>
-          <span class="p-amount">To be confirmed</span>
-          <span class="p-unit">Pricing pending client confirmation</span>
-          <p>Individualized academic support, targeted to the plan.</p>
+        <div class="price-card rv">
+          <span class="p-label">Individual</span>
+          <h3>One-on-One Tutoring</h3>
+          <span class="p-amount">$85</span>
+          <span class="p-unit">per hour</span>
+          <p>Individualized academic support, guided by the plan.</p>
         </div>
-        <div class="price-card tbc rv">
-          <span class="p-label">Purpose Pods</span>
-          <h3>Per student</h3>
-          <span class="p-amount">To be confirmed</span>
-          <span class="p-unit">Pricing pending client confirmation</span>
-          <p>Small-group learning with students in the same grade range and subject area.</p>
+        <div class="price-card rv">
+          <span class="p-label">Small Group</span>
+          <h3>Purpose Pods</h3>
+          <span class="p-amount">From $55</span>
+          <span class="p-unit">per student, per hour</span>
+          <p>2&ndash;3 students matched by grade, subject and goals.</p>
         </div>
       </div>
-      <p class="svc-foot rv">All pricing on this site is placeholder and awaiting confirmation from Purpose Education.</p>
     </div>
   </section>
 
   <section class="paper">
     <div class="wrap-narrow">
       <div class="sec-head rv">
-        <p class="eyebrow">Common questions</p>
+        <p class="eyebrow">Common Questions</p>
         <h2>Before you begin</h2>
       </div>
       <div class="faq rv">
@@ -159,8 +180,8 @@
           <div class="faq-body"><p>Students in PreK through Grade 12.</p></div>
         </details>
         <details>
-          <summary>What subjects are covered?</summary>
-          <div class="faq-body"><p>Reading, writing, math, homework support and study skills. College planning is handled separately through College Support.</p></div>
+          <summary>Are sessions remote?</summary>
+          <div class="faq-body"><p>Yes. All tutoring is delivered remotely, nationwide, with evening and weekend availability.</p></div>
         </details>
         <details>
           <summary>How often is progress reviewed?</summary>
@@ -174,9 +195,9 @@
   <div class="wrap">
     <div class="cta-plate rv">
       <img src="images/logo.png" alt="" width="64">
-      <p class="eyebrow">Get started</p>
+      <p class="eyebrow">Get Started</p>
       <h2>Create Your Student&rsquo;s Purpose Plan</h2>
-      <p>Tell us where your student is today and what you would like them to reach. We will build the plan from there.</p>
+      <p>Every student&rsquo;s journey begins with understanding where they are today and where they want to go. We&rsquo;ll create a personalized roadmap to help them get there.</p>
       <a class="btn btn-crimson" href="contact.html">Start Your Purpose Plan</a>
     </div>
   </div>
@@ -189,31 +210,38 @@
         <img src="images/logo.png" alt="Purpose Education crest" width="78">
         <span class="brand-name">Purpose Education</span>
         <p>Education, done purposefully.</p>
+        <div class="socials">
+      <a href="#" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.2-1.5 1.5-1.5H16.7V4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2V10H7.6v3h2.7v8h3.2z"/></svg></a>
+      <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-.9 0-1.4.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.3-.3.8-.3 1.7C3.4 8.5 3.4 8.9 3.4 12s0 3.5.1 4.8c0 .9.2 1.4.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.3.1.8.3 1.7.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.3.3-.8.3-1.7.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c0-.9-.2-1.4-.3-1.7-.2-.4-.4-.7-.7-1-.3-.3-.6-.5-1-.7-.3-.1-.8-.3-1.7-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 8.1a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm6.2-8.3a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+      <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M6.9 8.6H3.7V21h3.2V8.6zM5.3 3.1a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM21 21h-3.2v-6c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.8 1.3-.1.2-.1.6-.1.9V21H10.8s.1-11.2 0-12.4H14v1.8c.4-.7 1.2-1.7 3-1.7 2.2 0 3.9 1.4 3.9 4.5V21z"/></svg></a>
+    </div>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h4>Programs</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
           <li><a href="purpose-plan.html">The Purpose Plan</a></li>
-          <li><a href="tutoring-pods.html">Tutoring + Purpose Pods</a></li>
+          <li><a href="tutoring.html">One-on-One Tutoring</a></li>
+          <li><a href="purpose-pods.html">Purpose Pods</a></li>
           <li><a href="summer-program.html">Summer Program</a></li>
-          <li><a href="college-support.html">College Support</a></li>
+          <li><a href="college-support.html">College Admissions &amp; Planning</a></li>
         </ul>
       </div>
       <div>
-        <h4>Get started</h4>
+        <h4>Company</h4>
         <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html#tutors">Why Our Tutors</a></li>
           <li><a href="index.html#finder">Find your starting point</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="purpose-plan.html">How the plan works</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <p class="foot-note">
+          Remote tutoring, nationwide<br>
+          Evenings and weekends available<br>
           Email &mdash; to be confirmed<br>
-          Phone &mdash; to be confirmed<br>
-          Service area &mdash; to be confirmed
+          Phone &mdash; to be confirmed
         </p>
       </div>
     </div>
