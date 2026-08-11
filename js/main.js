@@ -177,7 +177,8 @@
     if (!card) return;
 
     var stepEls = card.querySelectorAll('.f-step');
-    var pips = card.querySelectorAll('.f-progress i');
+    var nodes = card.querySelectorAll('.f-node');
+    var rails = card.querySelectorAll('.f-rail');
     var LAST = stepEls.length - 1;
     var answers = {};
     var current = 0;
@@ -188,22 +189,12 @@
       g68: 'Grades 6\u20138',
       g912: 'Grades 9\u201312'
     };
-    var NEED = {
+    var FOCUS = {
       literacy: 'reading and writing',
-      math: 'math',
-      habits: 'homework and study skills',
-      ahead: 'enrichment and next-grade preparation',
-      college: 'college planning'
+      math: 'mathematics',
+      skills: 'academic skills',
+      future: 'planning for what comes next'
     };
-
-    /* Which program we would suggest for this grade + need. The parent can
-       still choose either — this only sets the "Recommended" flag on step 3. */
-    function suggested(a) {
-      if (a.need === 'college') return 'solo';
-      if (a.grade === 'prek2') return 'solo';
-      if (a.need === 'habits' || a.need === 'ahead') return 'group';
-      return 'solo';
-    }
 
     var PROGRAM = {
       solo: {
@@ -228,51 +219,45 @@
         ],
         alt: 'Prefer undivided attention? See <a href="tutoring.html">One-on-One Tutoring</a>.'
       },
-      unsure: {
-        name: 'The Purpose Plan',
-        href: 'purpose-plan.html',
+      summer: {
+        name: 'Summer Program',
+        href: 'summer-program.html',
+        price: 'Customized packages',
+        list: [
+          'Personalized summer learning experience',
+          'Assessment and a Purpose Plan',
+          'Progress tracking and a final growth report'
+        ],
+        alt: 'Looking for term-time support instead? See <a href="programs.html">Academic Programs</a>.'
+      },
+      college: {
+        name: 'College Admissions &amp; Planning',
+        href: 'college-support.html',
         price: 'Customized pricing',
         list: [
-          'A personalized educational roadmap',
-          'Built around strengths, goals and learning needs',
-          'Sets the right format before instruction begins'
+          'College planning and application strategy',
+          'Essays, FAFSA and scholarship support',
+          'Academic planning aligned to where the student is heading'
         ],
-        alt: 'From there, families choose <a href="tutoring.html">One-on-One Tutoring</a> or <a href="purpose-pods.html">Purpose Pods</a>.'
+        alt: 'Pair this with <a href="tutoring.html">One-on-One Tutoring</a> if coursework also needs attention.'
       }
     };
 
-    /* Step 2 — hide options that do not apply to the grade chosen. */
-    function filterNeeds() {
-      var grade = answers.grade;
-      each(card.querySelectorAll('[data-step="1"] .f-opt'), function (opt) {
-        var allowed = (opt.getAttribute('data-grades') || 'all').split(/\s+/);
-        if (allowed.indexOf('all') > -1 || allowed.indexOf(grade) > -1) {
-          opt.removeAttribute('hidden');
-        } else {
-          opt.setAttribute('hidden', '');
-        }
-      });
-    }
-
-    /* Step 3 — flag the suggested program. */
-    function flagPrograms() {
-      var pick = suggested(answers);
-      each(card.querySelectorAll('[data-step="2"] .prog-card'), function (pc) {
-        pc.classList.toggle('rec', pc.getAttribute('data-v') === pick);
-      });
+    /* Grade + focus area decide the recommendation. */
+    function recommend(a) {
+      if (a.focus === 'future') return a.grade === 'g912' ? 'college' : 'summer';
+      if (a.focus === 'skills') return 'group';
+      return 'solo';
     }
 
     function render() {
-      var key = answers.program === 'unsure' ? 'unsure'
-        : (answers.program || suggested(answers));
-      var rec = PROGRAM[key] || PROGRAM.unsure;
-
+      var rec = PROGRAM[recommend(answers)] || PROGRAM.solo;
       var why = 'For a student in ' + (GRADE[answers.grade] || 'your grade range') +
-        ' who needs help with ' + (NEED[answers.need] || 'their studies') +
+        ' focusing on ' + (FOCUS[answers.focus] || 'their studies') +
         ', we would begin here. Every student starts with The Purpose Plan, so the ' +
         'instruction fits the assessment rather than the other way round.';
 
-      card.querySelector('#resName').textContent = rec.name;
+      card.querySelector('#resName').innerHTML = rec.name;
       card.querySelector('#resWhy').textContent = why;
       card.querySelector('#resList').innerHTML = rec.list.map(function (i) {
         return '<li>' + i + '</li>';
@@ -286,13 +271,12 @@
     function show(index) {
       current = index;
       each(stepEls, function (s, n) { s.classList.toggle('active', n === index); });
-      each(pips, function (p, n) { p.classList.toggle('on', n <= Math.min(index, pips.length - 1)); });
-      if (index === 1) filterNeeds();
-      if (index === 2) flagPrograms();
+      each(nodes, function (n, i) { n.classList.toggle('on', i <= index); });
+      each(rails, function (r, i) { r.classList.toggle('on', i < index); });
       if (index === LAST) render();
     }
 
-    each(card.querySelectorAll('.f-opt, .prog-card'), function (btn) {
+    each(card.querySelectorAll('.f-opt, .focus-card'), function (btn) {
       btn.addEventListener('click', function () {
         answers[btn.getAttribute('data-k')] = btn.getAttribute('data-v');
         show(current + 1);
@@ -311,11 +295,65 @@
     if (restart) restart.addEventListener('click', function () { answers = {}; show(0); });
   })();
 
+  /* ----------------------------------------------------------- carousel --- */
+  (function carousel() {
+    var root = document.querySelector('.tst-carousel');
+    if (!root) return;
+    var track = root.querySelector('.tst-track');
+    var slides = root.querySelectorAll('.tst-slide');
+    var prev = root.querySelector('.tst-arrow.prev');
+    var next = root.querySelector('.tst-arrow.next');
+    var dotWrap = root.querySelector('.tst-dots');
+    var index = 0;
+
+    function perView() {
+      return window.matchMedia('(max-width: 1040px)').matches ? 1 : 2;
+    }
+    function maxIndex() {
+      return Math.max(0, slides.length - perView());
+    }
+    function buildDots() {
+      dotWrap.innerHTML = '';
+      for (var i = 0; i <= maxIndex(); i++) {
+        (function (n) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Go to testimonial ' + (n + 1));
+          b.addEventListener('click', function () { go(n); });
+          dotWrap.appendChild(b);
+        })(i);
+      }
+    }
+    function go(n) {
+      index = Math.max(0, Math.min(n, maxIndex()));
+      track.style.transform = 'translateX(-' + (index * (100 / perView())) + '%)';
+      prev.disabled = index === 0;
+      next.disabled = index === maxIndex();
+      each(dotWrap.children, function (d, i) { d.classList.toggle('on', i === index); });
+    }
+    prev.addEventListener('click', function () { go(index - 1); });
+    next.addEventListener('click', function () { go(index + 1); });
+    window.addEventListener('resize', function () { buildDots(); go(index); }, { passive: true });
+    buildDots();
+    go(0);
+  })();
+
   /* ---------------------------------------------------------------- form --- */
   (function contactForm() {
     var form = document.getElementById('enquiry');
     if (!form) return;
     var msg = document.getElementById('formMsg');
+
+    var format = form.querySelector('#format');
+    var library = form.querySelector('#libraryField');
+    if (format && library) {
+      format.addEventListener('change', function () {
+        var inPerson = format.value === 'in-person';
+        library.hidden = !inPerson;
+        var input = library.querySelector('input');
+        if (input) { if (inPerson) { input.setAttribute('required',''); } else { input.removeAttribute('required'); input.value=''; } }
+      });
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -331,6 +369,7 @@
 
       var bad = null;
       each(form.querySelectorAll('[required]'), function (field) {
+        if (field.offsetParent === null) return;   /* skip hidden fields */
         if (!bad && !field.value.trim()) bad = field;
       });
       var email = form.querySelector('[type="email"]');

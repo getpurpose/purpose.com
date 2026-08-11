@@ -59,7 +59,7 @@ def head(title, desc):
 <div class="progress" id="progress"></div>
 <div class="util-bar">
   <div class="wrap util-inner">
-    <span class="util-note">Remote tutoring nationwide &middot; Evenings and weekends</span>
+    <span class="util-note">Local in-person in the Boston area &middot; Nationwide online tutoring</span>
     {SOCIALS}
   </div>
 </div>
@@ -111,7 +111,7 @@ FOOTER = f"""<footer class="site-foot">
       <div class="foot-brand">
         <img src="images/logo.png" alt="Purpose Education crest" width="78">
         <span class="brand-name">Purpose Education</span>
-        <p>Education, done purposefully.</p>
+        <p>Education, Done Purposefully.</p>
         {SOCIALS}
       </div>
       <div>
@@ -136,9 +136,10 @@ FOOTER = f"""<footer class="site-foot">
       <div>
         <h4>Contact</h4>
         <p class="foot-note">
-          Remote tutoring, nationwide<br>
-          Evenings and weekends available<br>
-          Email &mdash; to be confirmed<br>
+          Local In-Person &mdash; Boston area<br>
+          Nationwide Online Tutoring<br>
+          Evening &amp; Weekend Availability<br>
+          <a href="mailto:info@thepurposeeducation.com">info@thepurposeeducation.com</a><br>
           Phone &mdash; to be confirmed
         </p>
       </div>
@@ -204,6 +205,51 @@ VENN_BLOCK = """<div class="venn-block rv">
   </div>
   <div>__VENN__</div>
 </div>"""
+
+SERVICES = """<section class="cream" id="services">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">Academic Programs</p>
+        <h2>Support for Every Stage of Your Student&rsquo;s Journey</h2>
+        <p>From early learners to college-bound students, our programs provide personalized support designed to help every student thrive.</p>
+      </div>
+      <div class="svc-grid featured">
+        <article class="svc rv">
+          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M20.5 11.5 L18 18 L11.5 20.5 L14 14 Z"/></svg>
+          <span class="badge">Signature Framework</span>
+          <h3>The Purpose Plan</h3>
+          <p>Personalized educational roadmap tailored to your student&rsquo;s goals, strengths, and learning needs.</p>
+          <a class="textlink" href="purpose-plan.html">Learn more</a>
+        </article>
+        <article class="svc rv">
+          <svg class="svc-icon" viewBox="0 0 32 32"><path d="M16 10c-2-2-5-2.5-8-2v13c3-.5 6 0 8 2 2-2 5-2.5 8-2V8c-3-.5-6 0-8 2Z"/><path d="M16 10v13"/></svg>
+          <h3>One-on-One Tutoring</h3>
+          <p>Individualized instruction designed to build confidence and academic success.</p>
+          <p class="price">$85<b>/hour</b></p>
+          <a class="textlink" href="tutoring.html">Learn more</a>
+        </article>
+        <article class="svc rv">
+          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="11" cy="13" r="3.2"/><circle cx="21" cy="13" r="3.2"/><path d="M5 24c0-3.4 2.7-5.5 6-5.5s6 2.1 6 5.5"/><path d="M15 24c0-3.4 2.7-5.5 6-5.5s6 2.1 6 5.5"/></svg>
+          <h3>Purpose Pods</h3>
+          <p>Collaborative small-group learning with students of similar age, subject, and goals.</p>
+          <p class="price">From $55<b>/hour per student</b></p>
+          <a class="textlink" href="purpose-pods.html">Learn more</a>
+        </article>
+        <article class="svc rv">
+          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.2 2.2M22.3 22.3l2.2 2.2M24.5 7.5l-2.2 2.2M9.7 22.3l-2.2 2.2"/></svg>
+          <h3>Summer Program</h3>
+          <p>Personalized summer learning that keeps students growing all season long.</p>
+          <a class="textlink" href="summer-program.html">Learn more</a>
+        </article>
+        <article class="svc rv">
+          <svg class="svc-icon" viewBox="0 0 32 32"><path d="M16 8 3 14l13 6 13-6-13-6Z"/><path d="M8.5 16.8V22c0 2 3.4 3.6 7.5 3.6s7.5-1.6 7.5-3.6v-5.2"/></svg>
+          <h3>College Admissions &amp; Planning</h3>
+          <p>Expert guidance for admissions, essays, FAFSA, scholarships, and future planning.</p>
+          <a class="textlink" href="college-support.html">Learn more</a>
+        </article>
+      </div>
+    </div>
+  </section>"""
 
 INCLUDED = """<section class="paper">
   <div class="wrap">
@@ -345,28 +391,28 @@ INDEX = """<main id="main">
     <img class="hero-crest" src="images/logo.png" alt="" data-par="0.16">
     <div class="wrap hero-inner">
       <div>
-        <p class="eyebrow on-navy fade-up">Helping Students and Families Create a Plan With Purpose</p>
+        <p class="eyebrow on-navy fade-up">Education, Done Purposefully.</p>
         <h1>
-          <span class="ln"><span>Personalized</span></span>
-          <span class="ln"><span><em>Remote Tutoring.</em></span></span>
+          <span class="ln"><span>Helping Students and</span></span>
+          <span class="ln"><span>Families Create a Plan</span></span>
+          <span class="ln"><span><em>With Purpose.</em></span></span>
         </h1>
         <div class="hero-rule fade-up d1"></div>
-        <p class="sub fade-up d1">Personalized remote tutoring tailored to your needs, with flexible scheduling that works around your busy life &mdash; including evenings and weekends.</p>
+        <p class="sub fade-up d1">Personalized educational support designed to help students strengthen skills, build confidence, and achieve their goals.</p>
         <div class="hero-actions fade-up d2">
           <a class="btn btn-gold" href="contact.html">Book a Free Consultation</a>
           <a class="btn btn-ghost" href="contact.html">Schedule Your First Session</a>
         </div>
-        <div class="creds fade-up d3">
-          <span class="creds-label">Founded by</span>
-          <span class="cred"><b>Harvard</b> Graduate School of Education</span>
-          <span class="cred"><b>UCLA</b> B.A. English &amp; Sociology</span>
-        </div>
+        <span class="hero-line fade-up d3">Local In-Person &amp; Nationwide Online Tutoring</span>
       </div>
       <div class="fade-up d2">
         <div class="plate-frame">
           <div class="photo-slot">
+            <!-- Drop a licensed photo in as images/hero.jpg and swap the two
+                 lines below for:
+                 <img class="photo-slot--photo" src="images/hero.jpg" alt="An educator working with a student">  -->
             <img src="images/logo.png" alt="" data-par="0.05">
-            <span class="slot-label">Photography placeholder &mdash; student and educator working together in a remote session, warm professional environment</span>
+            <span class="slot-label">Photography placeholder &mdash; educator and student working together at a desk, warm natural light</span>
           </div>
         </div>
       </div>
@@ -386,6 +432,8 @@ INDEX = """<main id="main">
     </div>
   </div>
 
+  <!-- Feature strip — removed from the homepage at the client's request,
+       kept here in case it is wanted back.
   <section class="paper" style="padding-top:clamp(2.4rem,5vw,3.4rem);padding-bottom:clamp(2.4rem,5vw,3.4rem)">
     <div class="wrap">
       <div class="incl rv">
@@ -398,22 +446,25 @@ INDEX = """<main id="main">
     </div>
   </section>
 
+  -->
+
   <section class="cream" id="difference">
     <div class="wrap split narrow-left">
       <div class="rv">
         <p class="eyebrow">The Purpose Education Difference</p>
-        <p class="diff-statement">At Purpose Education, every journey begins with a personalized plan built around each student&rsquo;s strengths, goals, and potential &mdash; because meaningful growth starts with understanding the individual. We meet students where they are and help them become who they&rsquo;re meant to be.</p>
+        <p class="diff-statement">Every student&rsquo;s journey at Purpose Education begins with The Purpose Plan. We identify where they are, what they need, and how they will grow &mdash; because meaningful progress starts with understanding the individual.</p>
+        <a class="btn btn-navy" href="purpose-plan.html" style="margin-top:.6rem">Learn More About The Purpose Plan</a>
       </div>
       <div class="pillars rv">
-        <div class="pillar"><div class="pillar-mark">I</div><div>
-          <h3>Individualized Planning</h3>
-          <p>Every student begins with a personalized plan built around their strengths, goals, and learning needs &mdash; not a one-size-fits-all curriculum.</p></div></div>
-        <div class="pillar"><div class="pillar-mark">II</div><div>
-          <h3>Purposeful Growth</h3>
-          <p>Every lesson has a purpose. Through targeted instruction, measurable goals, and consistent reflection, students grow academically while building the confidence and skills needed for long-term success.</p></div></div>
-        <div class="pillar"><div class="pillar-mark">III</div><div>
+        <div class="pillar"><div class="pillar-mark num">01</div><div>
+          <h3>Personalized Planning</h3>
+          <p>Every student begins with a personalized plan built around their strengths, goals, and learning needs.</p></div></div>
+        <div class="pillar"><div class="pillar-mark num">02</div><div>
+          <h3>Purposeful Instruction</h3>
+          <p>Every lesson is intentional, measurable, and designed to build lasting confidence and academic success.</p></div></div>
+        <div class="pillar"><div class="pillar-mark num">03</div><div>
           <h3>Family Partnership</h3>
-          <p>Families remain active partners throughout the journey, with clear communication, meaningful progress updates, and a shared understanding of where their student is, what they need, and how they are growing.</p></div></div>
+          <p>Parents stay informed through consistent communication, progress updates, and shared goals.</p></div></div>
       </div>
     </div>
   </section>
@@ -439,81 +490,27 @@ INDEX = """<main id="main">
 
   __FINDER__
 
-  <section class="plate" id="plan">
-    <div class="plate-bg" data-par="-0.06"></div>
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow on-navy">The Purpose Plan Framework</p>
-        <h2>Every student&rsquo;s journey begins with a personalized plan</h2>
-        <p>A personalized educational roadmap designed around each student&rsquo;s strengths, goals, and needs.</p>
-      </div>
-      __STEPS__
-      __VENNBLOCK__
-    </div>
-  </section>
-
-  <section class="cream" id="services">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <p class="eyebrow">Academic Programs</p>
-        <h2>Support for Every Stage of Your Student&rsquo;s Journey</h2>
-        <p>From early learners to college-bound students, our programs provide personalized support designed to help every student thrive.</p>
-      </div>
-      <div class="svc-grid featured">
-        <article class="svc rv">
-          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M20.5 11.5 L18 18 L11.5 20.5 L14 14 Z"/></svg>
-          <span class="badge">Signature Framework</span>
-          <h3>The Purpose Plan</h3>
-          <p>Personalized educational roadmap tailored to your student&rsquo;s goals, strengths, and learning needs.</p>
-          <a class="textlink" href="purpose-plan.html">Learn more</a>
-        </article>
-        <article class="svc rv">
-          <svg class="svc-icon" viewBox="0 0 32 32"><path d="M16 10c-2-2-5-2.5-8-2v13c3-.5 6 0 8 2 2-2 5-2.5 8-2V8c-3-.5-6 0-8 2Z"/><path d="M16 10v13"/></svg>
-          <h3>One-on-One Tutoring</h3>
-          <p>Individualized instruction designed to build confidence and academic success.</p>
-          <p class="price">$85<b>/hour</b></p>
-          <a class="textlink" href="tutoring.html">Learn more</a>
-        </article>
-        <article class="svc rv">
-          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="11" cy="13" r="3.2"/><circle cx="21" cy="13" r="3.2"/><path d="M5 24c0-3.4 2.7-5.5 6-5.5s6 2.1 6 5.5"/><path d="M15 24c0-3.4 2.7-5.5 6-5.5s6 2.1 6 5.5"/></svg>
-          <h3>Purpose Pods</h3>
-          <p>Collaborative small-group learning with students of similar age, subject, and goals.</p>
-          <p class="price">From $55<b>/hour per student</b></p>
-          <a class="textlink" href="purpose-pods.html">Learn more</a>
-        </article>
-        <article class="svc rv">
-          <svg class="svc-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6"/><path d="M16 4v3M16 25v3M4 16h3M25 16h3M7.5 7.5l2.2 2.2M22.3 22.3l2.2 2.2M24.5 7.5l-2.2 2.2M9.7 22.3l-2.2 2.2"/></svg>
-          <h3>Summer Program</h3>
-          <p>Personalized summer learning that keeps students growing all season long.</p>
-          <a class="textlink" href="summer-program.html">Learn more</a>
-        </article>
-        <article class="svc rv">
-          <svg class="svc-icon" viewBox="0 0 32 32"><path d="M16 8 3 14l13 6 13-6-13-6Z"/><path d="M8.5 16.8V22c0 2 3.4 3.6 7.5 3.6s7.5-1.6 7.5-3.6v-5.2"/></svg>
-          <h3>College Admissions &amp; Planning</h3>
-          <p>Expert guidance for admissions, essays, FAFSA, scholarships, and future planning.</p>
-          <a class="textlink" href="college-support.html">Learn more</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  __INCLUDED__
-
   __TESTIMONIALS__
 
-  __CTA__
+  __HOMECTA__
 </main>"""
 
 FINDER = """<section class="finder" id="finder">
     <img class="finder-crest" src="images/logo.png" alt="" data-par="0.12">
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="eyebrow">Find Your Starting Point</p>
-        <h2>Not sure which plan best supports your child?</h2>
-        <p>Answer three quick questions and we will show you where to begin.</p>
+        <p class="eyebrow">START WITH PURPOSE</p>
+        <h2>Let&rsquo;s Find the Right Starting Point for Your Student</h2>
+        <p>Answer a few questions to discover the best place to begin.</p>
       </div>
       <div class="finder-card rv">
-        <div class="f-progress"><i class="on"></i><i></i><i></i></div>
+        <div class="f-track">
+          <span class="f-node on"><i>1</i><span>Grade Level</span></span>
+          <span class="f-rail"></span>
+          <span class="f-node"><i>2</i><span>Focus Area</span></span>
+          <span class="f-rail"></span>
+          <span class="f-node"><i>3</i><span>Recommendation</span></span>
+        </div>
 
         <div class="f-step active" data-step="0">
           <p class="f-q">What grade is your student in?</p>
@@ -527,30 +524,34 @@ FINDER = """<section class="finder" id="finder">
         </div>
 
         <div class="f-step" data-step="1">
-          <p class="f-q">Not sure what support your student needs?</p>
-          <p class="f-hint">Choose the area that matters most right now.</p>
-          <div class="f-opts">
-            <button class="f-opt" data-k="need" data-v="literacy" data-grades="all"><b>Reading &amp; writing</b><small>Comprehension, phonics, written work</small></button>
-            <button class="f-opt" data-k="need" data-v="math" data-grades="all"><b>Math</b><small>Core skills and problem solving</small></button>
-            <button class="f-opt" data-k="need" data-v="habits" data-grades="all"><b>Homework &amp; study skills</b><small>Organisation, routines, independence</small></button>
-            <button class="f-opt" data-k="need" data-v="ahead" data-grades="all"><b>Getting ahead</b><small>Enrichment and next-grade preparation</small></button>
-            <button class="f-opt" data-k="need" data-v="college" data-grades="g912"><b>College planning</b><small>Applications, essays, FAFSA, scholarships</small></button>
+          <p class="f-q">Where would your student benefit most right now?</p>
+          <p class="f-hint">Choose the area that best reflects your student&rsquo;s current needs.</p>
+          <div class="focus-grid">
+            <button class="focus-card" data-k="focus" data-v="literacy">
+              <b>Reading &amp; Writing</b>
+              <span class="fc-sub">Build strong literacy skills.</span>
+              <ul><li>Reading Foundations</li><li>Writing &amp; Communication</li><li>Literacy Development</li></ul>
+            </button>
+            <button class="focus-card" data-k="focus" data-v="math">
+              <b>Mathematics</b>
+              <span class="fc-sub">Develop confidence in mathematics.</span>
+              <ul><li>Early Math Foundations</li><li>Algebra &amp; Geometry</li><li>Advanced Mathematics</li></ul>
+            </button>
+            <button class="focus-card" data-k="focus" data-v="skills">
+              <b>Academic Skills</b>
+              <span class="fc-sub">Build skills for success beyond the classroom.</span>
+              <ul><li>Homework Support</li><li>Study &amp; Executive Function</li><li>Organization &amp; Academic Coaching</li></ul>
+            </button>
+            <button class="focus-card" data-k="focus" data-v="future">
+              <b>Future Planning</b>
+              <span class="fc-sub">Prepare for what&rsquo;s next.</span>
+              <ul><li>Enrichment Opportunities</li><li>School &amp; College Readiness</li><li>College Admissions &amp; Scholarships</li></ul>
+            </button>
           </div>
           <button class="f-back" data-back>&larr; Back</button>
         </div>
 
         <div class="f-step" data-step="2">
-          <p class="f-q">Which program suits your student?</p>
-          <p class="f-hint">Based on your answers we have marked the one we would suggest &mdash; either works.</p>
-          <div class="prog-grid">
-            <button class="prog-card" data-k="program" data-v="solo"><span class="rec-flag">Recommended</span><b>One-on-One Tutoring</b><small>Full attention on their own plan &mdash; $85/hour</small></button>
-            <button class="prog-card" data-k="program" data-v="group"><span class="rec-flag">Recommended</span><b>Purpose Pods</b><small>2&ndash;3 students, matched by grade and subject &mdash; from $55/hour per student</small></button>
-            <button class="prog-card" data-k="program" data-v="unsure"><span class="rec-flag">Recommended</span><b>Not sure yet</b><small>Start with The Purpose Plan and let the assessment decide</small></button>
-          </div>
-          <button class="f-back" data-back>&larr; Back</button>
-        </div>
-
-        <div class="f-step" data-step="3">
           <div class="f-result">
             <div>
               <span class="f-res-tag">Recommended starting point</span>
@@ -580,50 +581,152 @@ FINDER = """<section class="finder" id="finder">
 TESTIMONIALS = """<section class="navy">
     <div class="wrap">
       <div class="sec-head rv">
-        <p class="eyebrow on-navy">In Their Words</p>
-        <h2>What families say</h2>
+        <p class="eyebrow on-navy">Stories of Growth and Impact</p>
+        <h2>Real families. Real growth. Real results.</h2>
       </div>
-      <div class="tst-grid">
-        <article class="tst rv">
-          <span class="tq">&ldquo;</span>
-          <p>Before we started working together, my child had difficulty reading and speaking English. The changes that I noticed was her English improving over time. What stood out most was your teaching style and how effective it was for my daughter.</p>
-          <div class="tst-more">
+      <div class="tst-carousel rv">
+        <div class="tst-viewport">
+          <div class="tst-track">
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>Before working with Nichole, my child had some grammatical and conversational difficulties. Through consistent support and personalized instruction, he became much more careful and confident in his communication.</p>
+            <div class="tst-more">
+            <p>I noticed significant improvement in both his communication skills and his ability to use language more effectively and constructively. What stood out most was Nichole&rsquo;s consistency, dedication, and the way she encouraged him to keep improving and strive for better results.</p>
+            <p>I would definitely recommend her services to other families because of the personalized support, dedication, and commitment she brings to each student&rsquo;s success. Thank you for all of your support!</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of Jordan</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>Nichole has been absolutely wonderful. She is patient and always tries different teaching methods to help my daughter understand and make progress. My daughter was enrolled in a dual language program at school and was struggling to learn to read in English.</p>
+            <div class="tst-more">
+            <p>In less than three months, Nichole taught her to read and gave her the confidence and skills she needed to succeed. I am so grateful for her dedication and would highly recommend her services to any family looking for personalized, effective academic support.</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of 1st Grade Student</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>Nichole has been absolutely wonderful. Before we began working together, my daughter was having trouble with both Math and Reading. After just a couple of weeks, we noticed she was more interested in learning, her reading improved significantly, and math became much easier for her.</p>
+            <div class="tst-more">
+            <p>What stood out most was that my daughter actually looked forward to working with Nichole after school. She felt comfortable with her and loved the way Nichole taught. I also appreciated her punctuality &mdash; she was always there when she said she would be, and most importantly, my kids love her.</p>
+            <p>I would highly recommend Nichole&rsquo;s services to any family looking for personalized academic support. Many times, our children need a little extra help that we, as parents, aren&rsquo;t always able to provide, and Nichole does exactly that. She is absolutely worth the time and investment.</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of Ivy and Robert</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>We appreciate hearing that our daughter&rsquo;s reading level is improving. Nichole&rsquo;s patient and compassionate approach, along with her ability to challenge our daughter in ways that build both confidence and success, has been incredibly reassuring.</p>
+            <div class="tst-more">
+            <p>We especially appreciated the consistent progress reports and regular updates, which helped us understand our daughter&rsquo;s growth and gave us confidence in her long-term academic journey. We are truly grateful for the time, effort, and genuine care that has gone into helping our daughter grow, and we would highly recommend Nichole&rsquo;s services to other families.</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of 1st Grade Student</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>As both a parent and a teacher, I have high standards when it comes to choosing academic support for my child. Nichole provided remote tutoring after school, and because I was often nearby, I had the opportunity to overhear many of her sessions.</p>
+            <div class="tst-more">
+            <p>Listening to the way she taught only reinforced my confidence in her. She is exactly the kind of educator you hope your child has in the classroom and as a tutor &mdash; patient, knowledgeable, engaging, and intentional in every lesson.</p>
+            <p>Throughout our time working together, Nichole consistently provided detailed progress reports and kept us informed about our child&rsquo;s growth, strengths, and next steps. Her communication made us feel like true partners in the learning process. I also trust her team because I know every tutor is carefully vetted and held to the same high educational standards that Nichole models herself.</p>
+            <p>As someone who works in education, I can confidently say that Purpose Education is the kind of academic support I would recommend to any family. When you understand what quality teaching looks like, this is exactly who you trust with your child&rsquo;s education.</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of 2nd Grade Student</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>Before we started working together, my child had difficulty reading and speaking English. The changes that I noticed was her English improving over time. What stood out most was your teaching style and how effective it was for my daughter.</p>
+            <div class="tst-more">
             <p>You were patient, supportive, and made learning enjoyable for her. I would definitely recommend your services to others. I am very satisfied with how you taught Emma. If she ever needs a tutor again in the future, we would definitely come back to you. Thank you for all your help!</p>
-          </div>
-          <button class="tst-toggle" aria-expanded="false">Read more</button>
-          <span class="tst-attrib">Parent of Emma</span>
-        </article>
-        <article class="tst rv">
-          <span class="tq">&ldquo;</span>
-          <p>When we moved from Argentina to Miami, my 7-year-old son, Rafa, spoke very little English. A few months into the school year, his teacher mentioned he was struggling to follow the lessons and becoming restless in class as a result. We saw progress almost immediately.</p>
-          <div class="tst-more">
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of Emma</span>
+          </article>
+        </div>
+        <div class="tst-slide">
+          <article class="tst">
+            <span class="tq">&ldquo;</span>
+            <p>When we moved from Argentina to Miami, my 7-year-old son, Rafa, spoke very little English. A few months into the school year, his teacher mentioned he was struggling to follow the lessons and becoming restless in class as a result. We saw progress almost immediately.</p>
+            <div class="tst-more">
             <p>Nichole&rsquo;s structured method for language, pronunciation, and math made a significant difference. By the first parent-teacher conference, his teacher noted remarkable improvement &mdash; Rafa was reading at grade level, and his overall grades had improved across all subjects.</p>
             <p>Nichole is focused, methodical, punctual, and kind. She always starts each session with a brief check-in about his week to get him talking before moving into the work. I have already recommended her to a friend with a son in middle school, and she had a similarly positive experience. Her approach gave Rafa the language tools and confidence he needed to succeed in school.</p>
+            </div>
+            <button class="tst-toggle" aria-expanded="false">Read more</button>
+            <span class="tst-attrib">Parent of Rafa</span>
+          </article>
+        </div>
           </div>
-          <button class="tst-toggle" aria-expanded="false">Read more</button>
-          <span class="tst-attrib">Parent of Rafa</span>
-        </article>
+        </div>
+        <div class="tst-nav">
+          <button class="tst-arrow prev" type="button" aria-label="Previous testimonial"></button>
+          <div class="tst-dots"></div>
+          <button class="tst-arrow next" type="button" aria-label="Next testimonial"></button>
+        </div>
       </div>
     </div>
   </section>"""
+
+HOME_CTA = """<section class="cream">
+  <div class="wrap">
+    <div class="cta-plate rv">
+      <img src="images/logo.png" alt="" width="64">
+      <p class="eyebrow">Get Started</p>
+      <h2>Your Child&rsquo;s Future Deserves More Than One-Size-Fits-All Support</h2>
+      <p>Every student has unique strengths, challenges, and goals. That&rsquo;s why every journey at Purpose Education begins with The Purpose Plan &mdash; a personalized roadmap that identifies where your child is today, what they need, and how they&rsquo;ll grow.</p>
+      <p>Schedule The Purpose Plan and take the first step toward meaningful, lasting growth.</p>
+      <a class="btn btn-crimson" href="contact.html">Start Your Purpose Plan</a>
+    </div>
+  </div>
+</section>"""
 
 ABOUT = """<main id="main">
   __HERO__
 
   <section class="paper">
-    <div class="wrap split">
-      <div class="rv">
-        <p class="eyebrow">Our Mission</p>
-        <p class="diff-statement">Every student has a unique educational journey. We create personalized pathways that help students discover their strengths, overcome challenges, and achieve their goals.</p>
-      </div>
+    <div class="wrap split narrow-left">
       <div class="rv prose">
-        <p class="eyebrow">Our Story</p>
-        <p>Purpose Education was founded on the belief that every student deserves more than a one-size-fits-all approach. That&rsquo;s why we created The Purpose Plan &mdash; a personalized framework designed to understand each student&rsquo;s strengths, goals, and learning needs before instruction begins, creating a clear path for meaningful academic growth.</p>
+        <p class="eyebrow">Our Mission</p>
+        <p class="display-head">Helping Every Student Grow with Purpose</p>
+        <p>Every student deserves an educational journey designed around who they are. We create personalized pathways that help students discover their strengths, overcome challenges, and achieve their goals.</p>
+      </div>
+      <div class="rv">
+        <div class="plate-frame">
+          <div class="photo-slot light">
+            <!-- Drop a licensed photo in as images/about.jpg and swap the two
+                 lines below for:
+                 <img class="photo-slot- -photo" src="images/about.jpg" alt="A student working with an educator">  -->
+            <img src="images/logo.png" alt="">
+            <span class="slot-label">Photography placeholder &mdash; student and educator, warm natural light</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="cream">
+    <div class="wrap-narrow rv prose">
+      <p class="eyebrow">Our Story</p>
+      <p class="display-head">Why We Created Purpose Education</p>
+      <p>Purpose Education was founded on the belief that every student deserves more than a one-size-fits-all approach. After years of teaching in classrooms, tutoring students, and working with families from diverse backgrounds, one truth became clear: meaningful growth begins by understanding the individual learner.</p>
+      <p>That belief became the foundation of <strong>The Purpose Plan</strong> &mdash; our personalized framework that helps identify where each student is, what they need, and how they will grow. Today, that same philosophy guides every tutoring session, academic program, and family partnership.</p>
+    </div>
+  </section>
+
+  <section class="paper">
     <div class="wrap split narrow-left">
       <div class="rv">
         <div class="plate-frame">
@@ -647,12 +750,12 @@ ABOUT = """<main id="main">
     </div>
   </section>
 
-  <section class="paper">
+  <section class="cream">
     <div class="wrap">
       <div class="sec-head rv">
         <p class="eyebrow">Educational Philosophy</p>
         <h2>How We Think About Learning</h2>
-        <p>Purpose Education is more than tutoring &mdash; it&rsquo;s a personalized approach to learning. We help families understand where their student is today, create a plan for where they want to go, and provide the support to help them get there.</p>
+        <p>Purpose Education is more than tutoring &mdash; it&rsquo;s a personalized approach to learning.</p>
       </div>
       <div class="grid grid-2">
         <div class="card rv">
@@ -679,13 +782,34 @@ ABOUT = """<main id="main">
     </div>
   </section>
 
-  <section class="plate">
-    <div class="plate-bg" data-par="-0.06"></div>
+  <section class="stats">
     <div class="wrap">
-      <div class="sec-head rv" style="margin-bottom:0">
-        <p class="eyebrow on-navy">What Guides Us</p>
-        <h2>Faith &middot; Excellence &middot; Purpose</h2>
-        <p>[Placeholder &mdash; Purpose Education to confirm how prominently these three values should feature, and to supply a short line for each.]</p>
+      <p class="eyebrow center" style="margin-bottom:0;padding-top:2rem">Why Families Trust Purpose Education</p>
+      <div class="stats-grid rv">
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><path d="M16 6 3 12l13 6 13-6-13-6Z"/><path d="M8.5 14.8V20c0 2 3.4 3.6 7.5 3.6s7.5-1.6 7.5-3.6v-5.2"/></svg>
+          <b>8+</b><span>Years of Educational Experience</span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><circle cx="11" cy="12" r="3.4"/><circle cx="21" cy="12" r="3.4"/><path d="M4 24c0-3.6 3-5.8 7-5.8s7 2.2 7 5.8"/><path d="M14 24c0-3.6 3-5.8 7-5.8s7 2.2 7 5.8"/></svg>
+          <b>Students</b><span>Supported</span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><rect x="8" y="5" width="16" height="22" rx="2"/><path d="M12 12h8M12 17h8M12 22h5"/></svg>
+          <b>Personalized</b><span>Learning Plans</span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><path d="M5 25V7h22v18Z"/><path d="M9 20l5-5 4 3 5-6"/></svg>
+          <b>Progress</b><span>Reports for Every Family</span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3 3.5 4.5 7 4.5 11S19 24.5 16 27c-3-2.5-4.5-6-4.5-11S13 8.5 16 5Z"/></svg>
+          <b>Nationwide</b><span>Virtual Tutoring</span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 32 32"><path d="M16 4 6 8v7c0 6 4.3 10.5 10 12 5.7-1.5 10-6 10-12V8L16 4Z"/><path d="m12 16 3 3 5-6"/></svg>
+          <b>Expertly</b><span>Vetted Educators</span>
+        </div>
       </div>
     </div>
   </section>
@@ -771,8 +895,8 @@ PURPOSE_PLAN = """<main id="main">
           <div class="faq-body"><p>Students in PreK through Grade 12.</p></div>
         </details>
         <details>
-          <summary>Are sessions remote?</summary>
-          <div class="faq-body"><p>Yes. All tutoring is delivered remotely, nationwide, with evening and weekend availability.</p></div>
+          <summary>Are sessions in person or online?</summary>
+          <div class="faq-body"><p>Both. We offer local in-person tutoring in the Boston area and online tutoring nationwide, with evening and weekend availability.</p></div>
         </details>
         <details>
           <summary>How often is progress reviewed?</summary>
@@ -832,7 +956,20 @@ PROGRAMS = """<main id="main">
     </div>
   </section>
 
+  <section class="paper">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow">Why It Starts With a Plan</p>
+        <h2>Your Child&rsquo;s Future Deserves More Than One-Size-Fits-All Support</h2>
+        <p>Every student has unique strengths, challenges, and goals. That&rsquo;s why every journey at Purpose Education begins with The Purpose Plan &mdash; a personalized roadmap that identifies where your child is today, what they need, and how they&rsquo;ll grow.</p>
+      </div>
+      <div class="center rv"><a class="btn btn-navy" href="contact.html">Schedule The Purpose Plan</a></div>
+    </div>
+  </section>
+
   __INCLUDED__
+
+  __SERVICES__
 
   __WHYTUTORS__
 
@@ -853,7 +990,7 @@ TUTORING = """<main id="main">
         <table class="spec">
           <tbody>
             <tr><th>Grades</th><td>PreK&ndash;12</td></tr>
-            <tr><th>Format</th><td>Remote, one-to-one</td></tr>
+            <tr><th>Format</th><td>One-to-one &mdash; in person in the Boston area, or online nationwide</td></tr>
             <tr><th>Availability</th><td>Flexible scheduling, including evenings and weekends</td></tr>
             <tr><th>Begins with</th><td>The Purpose Plan</td></tr>
             <tr><th>Price</th><td>$85 per hour</td></tr>
@@ -920,7 +1057,7 @@ PODS = """<main id="main">
       <div class="sec-head rv">
         <p class="eyebrow">Investment</p>
         <h2>Purpose Pod pricing</h2>
-        <p>Priced per student, per hour. All sessions are remote.</p>
+        <p>Priced per student, per hour. Available in person in the Boston area or online nationwide.</p>
       </div>
       <div class="price-grid" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto">
         <div class="price-card rv">
@@ -1059,13 +1196,14 @@ CONTACT = """<main id="main">
         <h2>We would like to hear about your student</h2>
         <p>Tell us where your student is today and what you would like them to reach. Every student begins with The Purpose Plan, so the first conversation is about understanding current skills and needs.</p>
         <ul class="checklist" style="margin:1.8rem 0">
-          <li><b>Remote tutoring, nationwide</b> &mdash; sessions from anywhere in the US</li>
-          <li><b>Flexible scheduling</b> &mdash; including evenings and weekends</li>
+          <li><b>Local in-person</b> &mdash; Boston area</li>
+          <li><b>Nationwide online tutoring</b> &mdash; sessions from anywhere in the US</li>
+          <li><b>Evening &amp; weekend availability</b></li>
           <li><b>Free consultation</b> &mdash; no cost to talk it through first</li>
         </ul>
         <div class="ph-block">
-          <span class="ph">Contact details placeholder</span>
-          <p><strong>Email</strong> &mdash; to be confirmed<br>
+          <span class="ph">Contact details</span>
+          <p><strong>Email</strong> &mdash; <a href="mailto:info@thepurposeeducation.com">info@thepurposeeducation.com</a><br>
              <strong>Phone</strong> &mdash; to be confirmed<br>
              <strong>Hours</strong> &mdash; to be confirmed</p>
         </div>
@@ -1087,13 +1225,61 @@ CONTACT = """<main id="main">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required autocomplete="email">
             </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Your student&rsquo;s grade, what you would like help with, and anything else we should know."></textarea>
+            <div class="field-row">
+              <div class="field">
+                <label for="age">Child&rsquo;s age</label>
+                <input type="text" id="age" name="age" required placeholder="e.g. 7">
+              </div>
+              <div class="field">
+                <label for="grade">Grade</label>
+                <select id="grade" name="grade" required>
+                  <option value="">Select a grade</option>
+                  <option>PreK</option><option>Kindergarten</option>
+                  <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+                  <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
+                  <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+                  <option>Grade 10</option><option>Grade 11</option><option>Grade 12</option>
+                </select>
+              </div>
             </div>
-            <button type="submit" class="btn btn-crimson">Send Message</button>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option>Reading</option><option>Writing</option><option>Math</option>
+                <option>Homework Support</option><option>Study Skills</option>
+                <option>Science</option><option>Social Studies / History</option>
+                <option>College Admissions &amp; Planning</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="hours">Hours interested</label>
+              <select id="hours" name="hours" required>
+                <option value="">Select hours per week</option>
+                <option>1 hour per week</option>
+                <option>2 hours per week</option>
+                <option>3 hours per week</option>
+                <option>4+ hours per week</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="format">Remote or in-person</label>
+              <select id="format" name="format" required>
+                <option value="">Select a format</option>
+                <option value="remote">Remote &mdash; online, nationwide</option>
+                <option value="in-person">In-person &mdash; Boston area</option>
+                <option value="either">Either is fine</option>
+              </select>
+            </div>
+            <div class="field" id="libraryField" hidden>
+              <label for="library">Nearest library</label>
+              <input type="text" id="library" name="library" placeholder="For in-person availability">
+            </div>
+            <button type="submit" class="btn btn-crimson">Send Enquiry</button>
             <p class="form-msg" id="formMsg" role="status"></p>
-            <p class="form-note">We reply to every enquiry. Prefer to talk first? Ask for a free consultation in your message.</p>
+            <p class="form-note">We reply to every enquiry. Prefer to talk first? Ask for a free consultation.</p>
           </form>
         </div>
       </div>
@@ -1104,7 +1290,7 @@ CONTACT = """<main id="main">
     <div class="plate-bg" data-par="-0.06"></div>
     <div class="wrap sec-head rv" style="margin-bottom:0">
       <p class="eyebrow on-navy">Not Sure Where to Start?</p>
-      <h2>Answer three questions and we will point you to the right program</h2>
+      <h2>Answer a few questions and we will point you to the right program</h2>
       <p style="margin-bottom:1.8rem">It takes about thirty seconds.</p>
       <a class="btn btn-gold" href="index.html#finder">Find your starting point</a>
     </div>
@@ -1112,7 +1298,7 @@ CONTACT = """<main id="main">
 </main>"""
 
 MARQUEE_ITEMS = ["Reading", "Writing", "Math", "Homework Support", "Study Skills",
-                 "Grades PreK&ndash;12", "Remote Sessions", "Evenings &amp; Weekends"]
+                 "Grades PreK&ndash;12", "In-Person &amp; Online", "Evenings &amp; Weekends"]
 # Four repetitions: one half of the strip must exceed the widest viewport, or a
 # gap opens at the end of each loop. (Reported bug — do not reduce below 4.)
 MARQUEE = "\n      ".join(
@@ -1123,15 +1309,15 @@ MARQUEE = "\n      ".join(
 
 PAGES = [
     dict(slug="index.html",
-         title="Purpose Education — Personalized Remote Tutoring, PreK–12",
-         desc="Personalized remote tutoring for students in PreK-12, with flexible scheduling including evenings and weekends. Every student begins with The Purpose Plan.",
+         title="Purpose Education — Local In-Person & Nationwide Online Tutoring, PreK–12",
+         desc="Local in-person tutoring in the Boston area and nationwide online tutoring for PreK-12. Every student begins with The Purpose Plan.",
          body=INDEX, hero=None),
 
     dict(slug="about.html", title="About — Purpose Education",
          desc="Purpose Education was founded by Nichole Najera, a classroom educator and graduate of the Harvard Graduate School of Education and UCLA.",
          body=ABOUT,
-         hero=page_hero("About", "Education, done <em>purposefully.</em>",
-                        "Every student has a unique educational journey. We create personalized pathways that help students discover their strengths, overcome challenges, and achieve their goals.")),
+         hero=page_hero("About", "Education, Done <em>Purposefully.</em>",
+                        "Every student deserves an educational experience designed around who they are. At Purpose Education, we believe meaningful growth begins with understanding each student&rsquo;s strengths, challenges, and goals. Through personalized learning, we help students build confidence, achieve academic success, and reach their full potential.")),
 
     dict(slug="purpose-plan.html", title="The Purpose Plan — Purpose Education",
          desc="A personalized educational roadmap designed around each student's strengths, goals and needs. Assess, Plan, Learn, Grow, Reflect.",
@@ -1147,14 +1333,14 @@ PAGES = [
                         "Whether your student thrives through individualized instruction or collaborative learning, every program is thoughtfully designed to help them grow with confidence, purpose, and a plan tailored to their unique journey.")),
 
     dict(slug="tutoring.html", title="One-on-One Tutoring — Purpose Education",
-         desc="Remote one-on-one tutoring for grades PreK-12 in reading, writing, math, homework support and study skills. $85 per hour.",
+         desc="One-on-one tutoring for grades PreK-12 in reading, writing, math, homework support and study skills. In person in the Boston area or online nationwide. $85 per hour.",
          body=TUTORING,
          hero=page_hero("One-on-One Tutoring", "One-on-One <em>Tutoring.</em>",
                         "Individualized instruction designed to build confidence and academic success, guided by The Purpose Plan.",
                         '<a class="btn btn-gold" href="contact.html">Get Started</a>')),
 
     dict(slug="purpose-pods.html", title="Purpose Pods — Purpose Education",
-         desc="Small-group remote learning for 2-3 students matched by grade level, subject and learning goals. From $55 per student per hour.",
+         desc="Small-group learning for 2-3 students matched by grade level, subject and learning goals. From $55 per student per hour.",
          body=PODS,
          hero=page_hero("Purpose Pods", "Purpose <em>Pods.</em>",
                         "Collaborative small-group learning with students of similar age, subject, and goals.",
@@ -1174,7 +1360,7 @@ PAGES = [
                         "Expert guidance for admissions, essays, FAFSA, scholarships, and future planning.")),
 
     dict(slug="contact.html", title="Contact — Purpose Education",
-         desc="Get in touch with Purpose Education to create your student's Purpose Plan. Remote tutoring nationwide, evenings and weekends.",
+         desc="Get in touch with Purpose Education to create your student's Purpose Plan. In-person in the Boston area, online nationwide, evenings and weekends.",
          body=CONTACT,
          hero=page_hero("Contact", "Create Your Student&rsquo;s <em>Purpose Plan.</em>",
                         "Tell us where your student is today and where they want to go. We&rsquo;ll create a personalized roadmap to help them get there.")),
@@ -1191,6 +1377,8 @@ def build():
         body = body.replace("__FINDER__", FINDER)
         body = body.replace("__TESTIMONIALS__", TESTIMONIALS)
         body = body.replace("__INCLUDED__", INCLUDED)
+        body = body.replace("__SERVICES__", SERVICES)
+        body = body.replace("__HOMECTA__", HOME_CTA)
         body = body.replace("__WHYTUTORS__", WHY_TUTORS)
         body = body.replace("__GRADECARDS__", GRADE_CARDS)
         body = body.replace("__SUBJECTS__", SUBJECT_BLOCKS)

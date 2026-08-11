@@ -673,3 +673,118 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.diff-statement,.f-q,.f-res-name,
   .field-row{grid-template-columns:1fr}
   .creds{gap:.5rem}
 }
+
+/* ==========================================================================
+   12. REVISION 3 — client feedback additions
+   ========================================================================== */
+
+/* --- larger header ------------------------------------------------------- */
+.head-inner{padding:1rem 0}
+.brand img{width:64px}
+.brand-name{font-size:1.28rem;letter-spacing:.19em}
+.brand-sub{font-size:.66rem}
+.nav{flex:1;justify-content:space-evenly;margin-left:2.5rem;gap:.75rem}
+.nav a,.nav-drop>button{font-size:.9rem}
+
+/* --- hero: shield on the left ------------------------------------------- */
+.hero-crest{right:auto;left:-8%;bottom:-16%;width:min(44vw,520px)}
+.hero-line{display:inline-block;font-family:var(--serif);font-size:.98rem;
+  letter-spacing:.06em;color:var(--gold-lt);border-top:1px solid rgba(201,152,47,.3);
+  padding-top:1.1rem;margin-top:.4rem}
+
+/* real photo slot — drop images/hero.jpg in and it replaces the placeholder */
+.photo-slot img.real,.photo-slot--photo{width:100%;height:100%;object-fit:cover;opacity:1}
+.photo-slot--photo{position:absolute;inset:0;padding:0}
+
+/* --- difference section -------------------------------------------------- */
+.pillar-mark.num{font-size:.9rem;letter-spacing:.02em}
+
+/* --- finder: labelled progress ------------------------------------------- */
+.f-track{display:flex;align-items:center;gap:.6rem;margin-bottom:2rem;flex-wrap:nowrap}
+.f-node{display:flex;align-items:center;gap:.55rem;flex:0 0 auto}
+.f-node i{width:26px;height:26px;border-radius:50%;border:1px solid rgba(1,30,62,.2);
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);
+  font-size:.78rem;color:var(--muted);font-style:normal;transition:background .35s,border-color .35s,color .35s}
+.f-node span{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+  transition:color .35s;white-space:nowrap}
+.f-node.on i{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.f-node.on span{color:var(--navy)}
+.f-rail{flex:1 1 auto;height:1px;background:rgba(1,30,62,.15);position:relative;min-width:24px}
+.f-rail::after{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);
+  transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.f-rail.on::after{transform:scaleX(1)}
+
+/* --- finder: focus-area cards -------------------------------------------- */
+.focus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.focus-card{background:var(--paper);border:1px solid var(--line);padding:1.4rem 1.2rem;
+  text-align:left;cursor:pointer;border-radius:2px;display:flex;flex-direction:column;
+  transition:border-color .22s,transform .22s,box-shadow .22s}
+.focus-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow)}
+.focus-card b{display:block;font-family:var(--serif);font-size:1.1rem;color:var(--navy);
+  font-weight:500;margin-bottom:.35rem}
+.focus-card .fc-sub{color:var(--muted);font-size:.87rem;line-height:1.5;display:block;
+  padding-bottom:.9rem;margin-bottom:.9rem;border-bottom:1px solid var(--rule)}
+.focus-card ul{list-style:none;margin:0;padding:0;display:grid;gap:.45rem}
+.focus-card li{display:flex;gap:.55rem;align-items:flex-start;font-size:.84rem;
+  color:var(--ink);line-height:1.45;text-align:left}
+.focus-card li::before{content:"";width:12px;height:12px;border-radius:50%;flex:0 0 auto;
+  margin-top:.2rem;border:1px solid var(--gold);
+  background:radial-gradient(circle at 50% 55%,var(--gold) 0 1.5px,transparent 1.6px)}
+
+/* --- testimonial carousel ------------------------------------------------ */
+.tst-carousel{position:relative}
+.tst-viewport{overflow:hidden}
+.tst-track{display:flex;transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.tst-slide{flex:0 0 50%;padding:0 .7rem;box-sizing:border-box;display:flex}
+.tst-slide .tst{width:100%}
+.tst-nav{display:flex;align-items:center;justify-content:center;gap:1.4rem;margin-top:2rem}
+.tst-arrow{width:42px;height:42px;border-radius:50%;border:1px solid rgba(201,152,47,.45);
+  background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .25s,border-color .25s,transform .25s}
+.tst-arrow:hover:not(:disabled){background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
+.tst-arrow:disabled{opacity:.3;cursor:default}
+.tst-arrow::after{content:"";width:8px;height:8px;border-right:1px solid var(--gold-lt);
+  border-bottom:1px solid var(--gold-lt);transition:border-color .25s}
+.tst-arrow:hover:not(:disabled)::after{border-color:var(--navy)}
+.tst-arrow.prev::after{transform:rotate(135deg) translate(-2px,-2px)}
+.tst-arrow.next::after{transform:rotate(-45deg) translate(-2px,-2px)}
+.tst-dots{display:flex;gap:.5rem}
+.tst-dots button{width:7px;height:7px;border-radius:50%;border:1px solid rgba(201,152,47,.5);
+  background:transparent;padding:0;cursor:pointer;transition:background .25s,transform .25s}
+.tst-dots button.on{background:var(--gold);transform:scale(1.35)}
+
+/* --- about: stats bar ---------------------------------------------------- */
+.stats{background:var(--cream);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;padding:2.4rem 0}
+.stat{text-align:center;padding:0 .6rem;position:relative}
+.stat + .stat::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:1px;background:var(--rule)}
+.stat svg{width:30px;height:30px;margin:0 auto .8rem;stroke:var(--gold);fill:none;stroke-width:1.1}
+.stat b{display:block;font-family:var(--serif);font-size:1.12rem;color:var(--navy);
+  font-weight:500;margin-bottom:.3rem}
+.stat span{display:block;font-size:.78rem;color:var(--muted);line-height:1.5}
+
+/* --- about: display headings --------------------------------------------- */
+.display-head{font-family:var(--serif);font-weight:300;color:var(--navy);
+  font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;margin-bottom:1rem}
+
+/* --- contact: conditional field ------------------------------------------ */
+.field[hidden]{display:none}
+
+/* --- responsive ---------------------------------------------------------- */
+@media(max-width:1040px){
+  .focus-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:2rem 1rem}
+  .stat:nth-child(3n+1)::before{display:none}
+  .tst-slide{flex:0 0 100%}
+  .hero-crest{display:none}
+  .nav{justify-content:flex-start;margin-left:0}
+  .f-node span{display:none}
+}
+@media(max-width:620px){
+  .focus-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3n+1)::before{content:""}
+  .stat:nth-child(2n+1)::before{display:none}
+  .brand-name{font-size:1.05rem}
+  .brand img{width:52px}
+}
