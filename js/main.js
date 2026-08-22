@@ -357,16 +357,6 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
-      /* ==================================================================
-         SUBMISSION POINT — nothing is wired up yet.
-         Pick one and replace this handler:
-           • Formspree / Netlify Forms — set the form `action` attribute and
-             delete this preventDefault handler entirely
-           • EmailJS — call emailjs.sendForm(...) here
-           • Custom endpoint — fetch(url,{method:'POST',body:new FormData(form)})
-         ================================================================== */
-
       var bad = null;
       each(form.querySelectorAll('[required]'), function (field) {
         if (field.offsetParent === null) return;   /* skip hidden fields */
@@ -379,13 +369,72 @@
       if (bad) {
         msg.textContent = 'Please complete every field, with a valid email address.';
         msg.classList.add('show');
+        msg.classList.remove('ok');
         bad.focus();
         return;
       }
-      msg.textContent = 'Form submission is not connected yet \u2014 no message was sent. ' +
-        'A submission endpoint must be configured before launch.';
-      msg.classList.add('show');
+
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
+      msg.classList.remove('show', 'ok');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (!res.ok) throw new Error('send failed');
+        form.reset();
+        if (library) {
+          library.hidden = true;
+          var input = library.querySelector('input');
+          if (input) input.removeAttribute('required');
+        }
+        var card = form.closest('.form-card');
+        if (card) card.classList.add('sent');
+        msg.textContent = 'Thank you. We received your inquiry and will be in touch shortly.';
+        msg.classList.add('show', 'ok');
+        card ? card.scrollIntoView({ behavior: rich ? 'smooth' : 'auto', block: 'center' }) : msg.scrollIntoView();
+      }).catch(function () {
+        msg.textContent = 'Something went wrong. Please email info@thepurposeeducation.com or try again.';
+        msg.classList.add('show');
+        msg.classList.remove('ok');
+      }).then(function () {
+        if (btn) btn.disabled = false;
+      });
     });
+  })();
+
+  /* ------------------------------------------- by-grade exclusive accordion --- */
+  (function gradeAcc() {
+    var root = document.querySelector('.grade-acc');
+    if (!root) return;
+    var items = root.querySelectorAll('details');
+
+    function openOne(id) {
+      each(items, function (el) { el.open = el.id === id; });
+      var target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: rich ? 'smooth' : 'auto', block: 'start' });
+    }
+
+    each(items, function (el) {
+      el.addEventListener('toggle', function () {
+        if (!el.open) return;
+        each(items, function (other) { if (other !== el) other.open = false; });
+      });
+    });
+
+    each(document.querySelectorAll('[data-grade]'), function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        openOne(link.getAttribute('data-grade'));
+      });
+    });
+
+    if (location.hash) {
+      var start = root.querySelector(location.hash);
+      if (start) start.open = true;
+    }
   })();
 
   /* --------------------------------------------------- current year stamp --- */

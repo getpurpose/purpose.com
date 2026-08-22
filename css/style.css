@@ -168,7 +168,7 @@ p{margin:0 0 1.1rem}
 .crumb span{margin:0 .5rem;color:rgba(240,221,180,.35)}
 
 /* 7. CONTENT COMPONENTS ---------------------------------------------------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.2rem);align-items:center}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,2vw,1rem);align-items:center}
 .split.narrow-left{grid-template-columns:.9fr 1.1fr}
 .split.narrow-right{grid-template-columns:1.1fr .9fr}
 .prose p:last-child{margin-bottom:0}
@@ -398,14 +398,14 @@ h2 em{font-style:italic}
   flex:0 0 auto;transform:translateY(-1px)}
 .venn-svg{width:100%;max-width:470px;margin:0 auto;height:auto}
 .venn-svg .vc{fill:rgba(201,152,47,.07);stroke:var(--gold);stroke-width:1.1;
-  stroke-dasharray:760;stroke-dashoffset:760;transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1)}
+  stroke-dasharray:1006;stroke-dashoffset:1006;transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1)}
 .venn-svg.in .vc{stroke-dashoffset:0}
 .venn-svg .vc:nth-of-type(2){transition-delay:.18s}
 .venn-svg .vc:nth-of-type(3){transition-delay:.36s}
 .venn-svg .vfade{opacity:0;transition:opacity .8s ease .9s}
 .venn-svg.in .vfade{opacity:1}
 .venn-svg .vlabel{font-family:"Fraunces",serif;font-size:15px;fill:var(--gold-lt);
-  letter-spacing:.11em;text-transform:uppercase}
+  letter-spacing:.06em;text-transform:uppercase}
 .venn-svg .vcore{font-family:"Fraunces",serif;font-size:16px;fill:#fff}
 
 /* 10. FOOTER / UTILITIES / RESPONSIVE -------------------------------------- */
@@ -576,6 +576,25 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.diff-statement,.f-q,.f-res-name,
 .grade-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(201,152,47,.45)}
 .grade-card .g-range{font-family:var(--serif);font-size:1.3rem;color:var(--navy);margin-bottom:.35rem;display:block}
 .grade-card .g-title{font-family:var(--serif);font-style:italic;font-size:.98rem;color:var(--gold);
+  .g-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+  }
+  .g-tag.gold {
+    background: linear-gradient(90deg, #ffd700 60%, #ffed88 100%);
+    color: #7d5a07;
+    font-weight: 600;
+    padding: 0.3em 0.9em;
+    border-radius: 999px;
+    font-size: 0.98em;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 4px 0 rgba(100,69,0,0.07);
+    border: 1px solid #ffe066;
+    display: inline-block;
+    line-height: 1.3;
+  }
   margin-bottom:.9rem;display:block;min-height:2.6em}
 .grade-card p{font-size:.92rem;color:var(--muted);margin-bottom:1.2rem}
 .grade-card .textlink{margin-top:auto;align-self:flex-start}
@@ -648,6 +667,15 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.diff-statement,.f-q,.f-res-name,
 .form-note{font-size:.84rem;color:var(--muted);margin:1rem 0 0}
 .form-msg{margin-top:1rem;font-size:.9rem;color:var(--crimson);display:none}
 .form-msg.show{display:block}
+.form-msg.ok{margin:0;padding:clamp(2.2rem,5vw,3.4rem) 1.6rem;text-align:center;
+  background:#e7f6ee;border:2px solid #1f7a4d;color:#14532d;
+  font-family:var(--serif);font-size:clamp(1.35rem,2.5vw,1.85rem);line-height:1.35}
+.form-msg.ok::before{content:"Inquiry sent";display:block;font-family:var(--sans);
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  color:#1f7a4d;margin-bottom:.7rem}
+.form-card.sent .field,.form-card.sent .field-row,.form-card.sent .btn,
+.form-card.sent .form-note,.form-card.sent .hp{display:none}
+.hp{position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden}
 
 /* --- responsive additions ------------------------------------------------ */
 @media(max-width:1040px){
@@ -896,7 +924,12 @@ h2,h3,h4{color:var(--navy)}
 .grade-chips span:first-child::before{content:none;margin:0}
 
 .grade-grid.visual-only .grade-card{align-items:center;text-align:center;padding:2.2rem 1.4rem}
-.grade-grid.visual-only .g-title{min-height:0;margin-bottom:0}
+.grade-grid.visual-only .g-title{min-height:0;margin-bottom:.85rem}
+.grade-grid.visual-only .textlink{align-self:center}
+.g-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;margin:0 0 1.15rem}
+.g-tag{font-family:var(--sans);font-size:.7rem;letter-spacing:.06em;color:var(--navy);
+  border:1px solid var(--rule);padding:.22rem .5rem}
+.g-tag.gold{border-color:rgba(201,152,47,.45);color:var(--navy)}
 .receive-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
 .receive-col{text-align:center;padding:1.4rem 1.1rem;border-right:1px solid var(--rule)}
 .receive-col:last-child{border-right:0}
@@ -976,4 +1009,47 @@ h2,h3,h4{color:var(--navy)}
   line-height:1.25;
   padding:.55rem 1.45rem .9rem;
   margin:0 0 .45rem;
+}
+
+/* --- by-grade accordion -------------------------------------------------- */
+.grade-acc{border-top:1px solid var(--line);margin-top:2.8rem}
+.grade-acc-item{border-bottom:1px solid var(--line);scroll-margin-top:7.5rem}
+.grade-acc-item summary{cursor:pointer;list-style:none;display:flex;align-items:center;
+  flex-wrap:wrap;gap:.55rem .7rem;padding:1.35rem 0}
+.grade-acc-item summary::-webkit-details-marker{display:none}
+.grade-acc-item summary::before{content:"";width:7px;height:7px;flex:0 0 auto;
+  border-right:1.5px solid var(--gold);border-bottom:1.5px solid var(--gold);
+  transform:rotate(45deg);margin:0 .35rem 0 .15rem}
+.grade-acc-item[open] summary::before{transform:rotate(-135deg);margin-top:5px}
+.grade-acc-item summary .g-range{font-family:var(--serif);font-size:1.02rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:0}
+.grade-acc-item summary .g-dot{width:4px;height:4px;border-radius:50%;
+  background:var(--gold);flex:0 0 auto}
+.grade-acc-item summary .g-title{font-family:var(--serif);font-style:italic;
+  font-size:1.02rem;color:var(--gold);letter-spacing:.02em;margin:0;min-height:0}
+.grade-acc-body{padding:0 0 2.3rem 1.85rem}
+.grade-acc-body>p{color:var(--navy);margin:0 0 1.8rem;max-width:46rem}
+.grade-acc-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 1.8rem}
+.g-col-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.g-col-icon{width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.g-col-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.2}
+.g-col-head h3{font-family:var(--sans);font-size:.68rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--navy);font-weight:600;margin:0}
+.grade-acc-cols .checklist{gap:.55rem}
+.grade-acc-cols .checklist li{font-size:.94rem;color:var(--ink)}
+.grade-college{display:flex;gap:1.1rem;align-items:flex-start;margin-top:2.1rem;
+  background:rgba(201,152,47,.08);border:1px solid rgba(201,152,47,.38);padding:1.6rem 1.5rem}
+.grade-college h3{font-family:var(--serif);font-size:1.25rem;color:var(--navy);
+  margin:0 0 .45rem;letter-spacing:0;text-transform:none}
+.grade-college p{margin:0 0 1.1rem;color:var(--muted);max-width:38rem}
+.grade-college .g-col-icon{margin-top:.15rem}
+
+@media(max-width:1040px){
+  .grade-acc-cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .grade-acc-body{padding-left:0}
+  .grade-acc-cols,.grade-college{grid-template-columns:1fr;display:block}
+  .grade-college .g-col-icon{margin-bottom:.8rem}
 }
