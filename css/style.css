@@ -398,7 +398,7 @@ h2 em{font-style:italic}
   flex:0 0 auto;transform:translateY(-1px)}
 .venn-svg{width:100%;max-width:470px;margin:0 auto;height:auto}
 .venn-svg .vc{fill:rgba(201,152,47,.07);stroke:var(--gold);stroke-width:1.1;
-  stroke-dasharray:1006;stroke-dashoffset:1006;transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1)}
+  stroke-dasharray:1182;stroke-dashoffset:1182;transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1)}
 .venn-svg.in .vc{stroke-dashoffset:0}
 .venn-svg .vc:nth-of-type(2){transition-delay:.18s}
 .venn-svg .vc:nth-of-type(3){transition-delay:.36s}
@@ -406,7 +406,7 @@ h2 em{font-style:italic}
 .venn-svg.in .vfade{opacity:1}
 .venn-svg .vlabel{font-family:"Fraunces",serif;font-size:15px;fill:var(--gold-lt);
   letter-spacing:.06em;text-transform:uppercase}
-.venn-svg .vcore{font-family:"Fraunces",serif;font-size:16px;fill:#fff}
+.venn-svg .vcore{font-family:"Fraunces",serif;font-size:18px;fill:#fff}
 
 /* 10. FOOTER / UTILITIES / RESPONSIVE -------------------------------------- */
 .site-foot{background:var(--navy);color:rgba(250,235,216,.75);padding:clamp(3rem,6vw,4.5rem) 0 0}
