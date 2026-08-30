@@ -18,6 +18,7 @@
   --shadow-lg:0 34px 80px -40px rgba(1,30,62,.55);
   --serif:"Fraunces",Georgia,"Times New Roman",serif;
   --sans:"Karla",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --display:"Libre Caslon Display",Georgia,"Times New Roman",serif;
   --gut:clamp(20px,5vw,72px);
   --maxw:1200px;
 }
@@ -49,8 +50,11 @@ p{margin:0 0 1.1rem}
 .navy .lede{color:rgba(250,235,216,.74)}
 .sec-head{max-width:44rem;margin:0 auto clamp(2.2rem,4vw,3.2rem);text-align:center}
 .sec-head h2{margin-bottom:.9rem}
-.sec-head p{margin:0;color:var(--muted)}
-.navy .sec-head p{color:rgba(250,235,216,.72)}
+.sec-head p:not(.eyebrow){margin:0;color:var(--muted)}
+.navy .sec-head p:not(.eyebrow){color:rgba(250,235,216,.72)}
+.sec-head .eyebrow{color:var(--gold)}
+.navy .sec-head .eyebrow,
+.plate .sec-head .eyebrow{color:var(--gold-lt)}
 
 /* 3. BUTTONS --------------------------------------------------------------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
@@ -187,9 +191,10 @@ p{margin:0 0 1.1rem}
 .pillar p{margin:0;font-size:.95rem;color:var(--muted)}
 .navy .pillar p{color:rgba(250,235,216,.7)}
 
-.diff-statement{font-family:var(--serif);font-weight:300;
+.diff-statement{font-family:var(--display);font-weight:400;
   font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.35;color:var(--navy)}
 .navy .diff-statement{color:var(--cream)}
+.diff-statement.price-line{font-family:var(--serif);font-weight:300}
 
 /* card grids */
 .grid{display:grid;gap:1.15rem}
@@ -493,7 +498,7 @@ html[data-motion="restrained"] .marquee{animation:none;width:auto;justify-conten
    ========================================================================== */
 
 /* --- typography softening (SOFT axis) ----------------------------------- */
-h1,h2,h3,h4,.brand-name,.eyebrow,.diff-statement,.f-q,.f-res-name,
+h1,h2,h3,h4,.brand-name,.eyebrow,.f-q,.f-res-name,
 .quote blockquote,.f-opt b,.marquee span,.equation span,.step .medal span,
 .venn-svg text,.price-card .p-amount,.creed,.faq summary,.badge{
   font-variation-settings:"SOFT" 45;
@@ -794,7 +799,7 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.diff-statement,.f-q,.f-res-name,
 .stat span{display:block;font-size:.78rem;color:var(--muted);line-height:1.5}
 
 /* --- about: display headings --------------------------------------------- */
-.display-head{font-family:var(--serif);font-weight:300;color:var(--navy);
+.display-head{font-family:var(--display);font-weight:400;color:var(--navy);
   font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;margin-bottom:1rem}
 
 /* --- contact: conditional field ------------------------------------------ */
@@ -1045,6 +1050,9 @@ h2,h3,h4{color:var(--navy)}
 .grade-college p{margin:0 0 1.1rem;color:var(--muted);max-width:38rem}
 .grade-college .g-col-icon{margin-top:.15rem}
 
+@media(min-width:1041px){
+  .h-oneline{white-space:nowrap}
+}
 @media(max-width:1040px){
   .grade-acc-cols{grid-template-columns:1fr 1fr}
 }

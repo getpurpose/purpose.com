@@ -220,7 +220,7 @@
         alt: 'Prefer undivided attention? See <a href="tutoring.html">One-on-One Tutoring</a>.'
       },
       summer: {
-        name: 'Summer Program',
+        name: 'Summer With Purpose',
         href: 'summer-program.html',
         price: 'Customized packages',
         list: [
