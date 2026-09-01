@@ -437,6 +437,20 @@
     }
   })();
 
+  /* ---------------------------------------------------------- intro video --- */
+  (function introVideo() {
+    var slot = document.querySelector('.video-slot');
+    if (!slot) return;
+    var video = slot.querySelector('video');
+    var play = slot.querySelector('.play');
+    if (!video || !play) return;
+    play.addEventListener('click', function () {
+      slot.classList.add('playing');
+      video.setAttribute('controls', '');
+      video.play();
+    });
+  })();
+
   /* --------------------------------------------------- current year stamp --- */
   (function year() {
     var el = document.getElementById('year');

@@ -544,8 +544,20 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.f-q,.f-res-name,
 
 /* --- intro video --------------------------------------------------------- */
 .video-frame{position:relative;padding:14px;border:1px solid rgba(201,152,47,.4)}
-.video-slot{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--navy)}
-.video-slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.video-slot{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  background:repeating-linear-gradient(135deg,rgba(250,235,216,.035) 0 2px,transparent 2px 9px),
+    linear-gradient(170deg,var(--navy-2),var(--navy) 70%)}
+.video-slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  opacity:0}
+.video-slot.playing video{opacity:1}
+.play{position:relative;z-index:2;width:74px;height:74px;border-radius:50%;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;background:rgba(1,30,62,.5);cursor:pointer;
+  transition:transform .3s ease,background .3s ease}
+.play::after{content:"";border-left:15px solid var(--gold-lt);border-top:9px solid transparent;
+  border-bottom:9px solid transparent;margin-left:5px}
+.play:hover{transform:scale(1.07);background:var(--navy-2)}
+.video-slot.playing .play{display:none}
 
 /* --- badges -------------------------------------------------------------- */
 .badge{display:inline-block;font-family:var(--sans);font-size:.6rem;letter-spacing:.2em;
