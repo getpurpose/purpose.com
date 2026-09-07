@@ -129,7 +129,7 @@ p{margin:0 0 1.1rem}
 .plate-frame{position:relative;padding:14px;border:1px solid rgba(201,152,47,.4)}
 .plate-frame::after{content:"";position:absolute;inset:6px;border:1px solid rgba(201,152,47,.2);pointer-events:none}
 .photo-slot{position:relative;aspect-ratio:4/4.4;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:1rem;text-align:center;padding:2rem;overflow:hidden;
+  justify-content:center;gap:1rem;text-align:center;overflow:hidden;
   /* background:repeating-linear-gradient(135deg,rgba(250,235,216,.035) 0 2px,transparent 2px 9px),
     linear-gradient(170deg,var(--navy-2),var(--navy) 70%) */
   }
