@@ -192,7 +192,7 @@ p{margin:0 0 1.1rem}
 .pillar p{margin:0;font-size:.95rem;color:var(--muted)}
 .navy .pillar p{color:rgba(250,235,216,.7)}
 
-.diff-statement{font-family:var(--display);font-weight:300;
+.diff-statement{font-family:var(--display);font-weight:700;
   font-size:clamp(1.45rem,2.6vw,2.1rem);line-height:1.35;color:var(--navy)}
 .navy .diff-statement{color:var(--cream)}
 .diff-statement.price-line{font-family:var(--serif);font-weight:300}
@@ -802,8 +802,11 @@ h1,h2,h3,h4,.brand-name,.eyebrow,.f-q,.f-res-name,
 .stat span{display:block;font-size:.78rem;color:var(--muted);line-height:1.5}
 
 /* --- about: display headings --------------------------------------------- */
-.display-head{font-family:var(--display);font-weight:300;color:var(--navy);
+.display-head{font-family:var(--display);font-weight:700;color:var(--navy);
   font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;margin-bottom:1rem}
+h1.cg-head,h2.cg-head,h3.cg-head,
+.hero h1.cg-head,.page-hero h1.cg-head,
+.hero h1.cg-head em,.page-hero h1.cg-head em{font-family:var(--display);font-weight:700}
 
 /* --- contact: conditional field ------------------------------------------ */
 .field[hidden]{display:none}
